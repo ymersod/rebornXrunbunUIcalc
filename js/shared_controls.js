@@ -1,3 +1,26 @@
+var REBORN_LIST = [
+	'Abra-Pulse',
+	'Aegislash-Crystal',
+	'Arceus-Pulse',
+	'Avalugg-Pulse',
+	'Breloom-Bot',
+	'Camerupt-Pulse',
+	'Cinccino-Cass',
+	'Clawitzer-Pulse',
+	'Gardevoir-Cass',
+	'Garbodor-Pulse',
+	'Glaceon-Cass',
+	'Hypno-Pulse',
+	'Magnezone-Pulse',
+	'Mime-Pulse',
+	'Mismagius-Aevian',
+	'Muk-Pulse',
+	'Swalot-Pulse',
+	'Tangrowth-Pulse-A',
+	'Tangrowth-Pulse-B',
+	'Tangrowth-Pulse-C',
+]
+
 if (!Array.prototype.indexOf) {
 	Array.prototype.indexOf = function (searchElement, fromIndex) { // eslint-disable-line no-extend-native
 		var k;
@@ -493,7 +516,11 @@ $(".set-selector").change(function () {
 				}//this ruined my day
 				var newPoke = document.createElement("img");
 				newPoke.className = "opposite-pok right-side";
-				newPoke.src = `https://raw.githubusercontent.com/May8th1995/sprites/master/${pok_name}.png`;
+				if (REBORN_LIST.includes(pok_name))
+				{
+					newPoke.src = `./js/data/reborn/${pok_name}.png`
+				}
+				else newPoke.src = `https://raw.githubusercontent.com/May8th1995/sprites/master/${pok_name}.png`;
 				newPoke.title = `${next_poks[i]}, ${next_poks[i]} BP`;
 				nextTrainer=`${next_poks[i]}`
 				newPoke.dataset.id = `${CURRENT_TRAINER_POKS[i].split("]")[1]}`;
@@ -1473,19 +1500,22 @@ function addBoxed(poke, box) {
 }
 
 function getSrcImgPokemon(poke) {
-	//edge case
-	if (!poke) {
-		return
-	}
-	if (poke.name == "Aegislash-Shield") {
-		return `https://raw.githubusercontent.com/May8th1995/sprites/master/Aegislash.png`
-	} else {
-		return `https://raw.githubusercontent.com/May8th1995/sprites/master/${poke.name}.png`
-	}
+	// edge case
+	console.log(poke.name)
+    if (!poke) {
+        return
+    }
+    if (poke.name == "aegislash-shield") {
+        return `https://raw.githubusercontent.com/May8th1995/sprites/master/Aegislash.png`;
+    } else if (REBORN_LIST.includes(poke.name)) {
+		return `./js/data/reborn/${poke.name}.png`
+    } else {
+        return `https://raw.githubusercontent.com/May8th1995/sprites/master/${poke.name}.png`;
+    }
 }
 
 function get_trainer_poks(trainer_name) {
-	var true_name = trainer_name.split("(")[1].split("\n")[0].trim()
+	var true_name = trainer_name.substring(trainer_name.indexOf('(') + 1).trim();
 	window.CURRENT_TRAINER = true_name.substring(0, true_name.length -1);
 	var matches = []
 	for (i in TR_NAMES) {

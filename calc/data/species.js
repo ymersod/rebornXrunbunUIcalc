@@ -6208,6 +6208,20 @@ var XY = (0, util_1.extend)(true, {}, BW, XY_PATCH);
 XY['Arceus'].otherFormes.push('Arceus-Fairy');
 XY['Arceus'].otherFormes.sort();
 var SM_PATCH = {
+    Abra: { otherFormes: ['Abra-Pulse'] },
+    Avalugg: { otherFormes: ['Avalugg-Pulse'] },
+    Breloom: { otherFormes: ['Breloom-Bot'] },
+    Camerupt: { otherFormes: ['Camerupt-Pulse', 'Camerupt-Mega'] },
+    Cinccino: { otherFormes: ['Cinccino-Cass'] },
+    Clawitzer: { otherFormes: ['Clawitzer-Pulse'] },
+    Garbodor: { otherFormes: ['Garbodor-Pulse'] },
+    Gardevoir: { otherFormes: ['Gardevoir-Cass', 'Gardevoir-Mega'] },
+    Glaceon: { otherFormes: ['Glaceon-Cass'] },
+    Hypno: { otherFormes: ['Hypno-Pulse'] },
+    Magnezone: { otherFormes: ['Magnezone-Pulse'] },
+    Mismagius: { otherFormes: ['Mismagius-Aevian'] },
+    Swalot: { otherFormes: ['Swalot-Pulse'] },
+    Tangrowth: { otherFormes: ['Tangrowth-Pulse-A', 'Tangrowth-Pulse-B', 'Tangrowth-Pulse-C'] },
     'Alakazam-Mega': { bs: { sd: 105 } },
     Arbok: { bs: { at: 95 } },
     Ariados: { bs: { sd: 70 } },
@@ -6269,6 +6283,142 @@ var SM_PATCH = {
     Vulpix: { otherFormes: ['Vulpix-Alola'] },
     Woobat: { bs: { hp: 65 } },
     Zygarde: { otherFormes: ['Zygarde-10%', 'Zygarde-Complete'] },
+    'Abra-Pulse': {
+        types: ['Psychic', 'Steel'],
+        bs: { hp: 25, at: 20, df: 115, sa: 195, sd: 155, sp: 140 },
+        weightkg: 19.5,
+        baseSpecies: 'Abra',
+        abilities: { 0: 'Magic Guard' }
+    },
+    'Aegislash-Crystal': {
+        types: ['Steel', 'Fairy'],
+        bs: { hp: 200, at: 150, df: 150, sa: 150, sd: 150, sp: 70 },
+        weightkg: 53,
+        abilities: { 0: 'Friend Guard' },
+        baseSpecies: 'Aegislash-Blade'
+    },
+    'Arceus-Pulse': {
+        types: ['Normal'],
+        bs: { hp: 255, at: 125, df: 155, sa: 125, sd: 155, sp: 160 },
+        weightkg: 320,
+        baseSpecies: 'Arceus',
+        abilities: { 0: 'Multitype' }
+    },
+    'Avalugg-Pulse': {
+        types: ['Ice'],
+        bs: { hp: 105, at: 160, df: 255, sa: 97, sd: 255, sp: 10 },
+        weightkg: 505,
+        baseSpecies: 'Avalugg',
+        abilities: { 0: 'Solid Rock' }
+    },
+    'Breloom-Bot': {
+        types: ['Steel', 'Fighting'],
+        bs: { hp: 210, at: 160, df: 140, sa: 60, sd: 100, sp: 100 },
+        weightkg: 39.2,
+        baseSpecies: 'Breloom',
+        abilities: { 0: 'Effect Spore' }
+    },
+    'Camerupt-Pulse': {
+        types: ['Fire', 'Ghost'],
+        bs: { hp: 1, at: 10, df: 10, sa: 170, sd: 10, sp: 10 },
+        weightkg: 220,
+        baseSpecies: 'Camerupt',
+        abilities: { 0: 'Sturdy' }
+    },
+    'Cinccino-Cass': {
+        types: ['Normal', 'Fairy'],
+        bs: { hp: 75, at: 95, df: 60, sa: 65, sd: 60, sp: 115 },
+        weightkg: 7.5,
+        abilities: { 0: 'Cute Charm' }
+    },
+    'Clawitzer-Pulse': {
+        types: ['Water', 'Dragon'],
+        bs: { hp: 252, at: 1, df: 60, sa: 120, sd: 70, sp: 252 },
+        weightkg: 35.3,
+        baseSpecies: 'Clawitzer',
+        abilities: { 0: 'Contrary' }
+    },
+    'Gardevoir-Cass': {
+        types: ['Dark', 'Fairy'],
+        bs: { hp: 68, at: 65, df: 65, sa: 125, sd: 115, sp: 80 },
+        weightkg: 48.4,
+        abilities: { 0: 'Synchronize' }
+    },
+    'Garbodor-Pulse': {
+        types: ['Poison'],
+        bs: { hp: 80, at: 137, df: 107, sa: 60, sd: 107, sp: 85 },
+        weightkg: 107.3,
+        abilities: { 0: 'Gooey' }
+    },
+    'Glaceon-Cass': {
+        types: ['Ice', 'Ghost'],
+        bs: { hp: 65, at: 60, df: 110, sa: 130, sd: 95, sp: 65 },
+        weightkg: 25.9,
+        abilities: { 0: 'Snow Cloak' }
+    },
+    'Hypno-Pulse': {
+        types: ['Psychic', 'Dark'],
+        bs: { hp: 120, at: 65, df: 190, sa: 125, sd: 225, sp: 80 },
+        weightkg: 75.6,
+        baseSpecies: 'Hypno',
+        abilities: { 0: 'No Guard' }
+    },
+    'Magnezone-Pulse': {
+        types: ['Electric', 'Steel'],
+        bs: { hp: 70, at: 70, df: 160, sa: 230, sd: 140, sp: 70 },
+        weightkg: 180,
+        baseSpecies: 'Magnezone',
+        abilities: { 0: 'Levitate' }
+    },
+    'Mime-Pulse': {
+        types: ['Ghost', 'Dark'],
+        bs: { hp: 252, at: 1, df: 190, sa: 1, sd: 190, sp: 252 },
+        weightkg: 54.5,
+        baseSpecies: 'Mr. Mime',
+        abilities: { 0: 'Wonder Guard' }
+    },
+    'Mismagius-Aevian': {
+        types: ['Grass', 'Ghost'],
+        bs: { hp: 60, at: 105, df: 60, sa: 105, sd: 60, sp: 105 },
+        weightkg: 4.4,
+        baseSpecies: 'Mismagius',
+        abilities: { 0: 'Magic Bounce' }
+    },
+    'Muk-Pulse': {
+        types: ['Poison'],
+        bs: { hp: 105, at: 105, df: 70, sa: 97, sd: 250, sp: 40 },
+        weightkg: 62,
+        baseSpecies: 'Muk',
+        abilities: { 0: 'Protean' }
+    },
+    'Swalot-Pulse': {
+        types: ['Poison', 'Water'],
+        bs: { hp: 100, at: 73, df: 210, sa: 110, sd: 210, sp: 40 },
+        weightkg: 80,
+        baseSpecies: 'Swalot',
+        abilities: { 0: 'Water Absorb' }
+    },
+    'Tangrowth-Pulse-A': {
+        types: ['Grass', 'Rock'],
+        bs: { hp: 100, at: 70, df: 200, sa: 70, sd: 160, sp: 10 },
+        weightkg: 128.6,
+        baseSpecies: 'Tangrowth',
+        abilities: { 0: 'Stamina' }
+    },
+    'Tangrowth-Pulse-B': {
+        types: ['Grass', 'Ground'],
+        bs: { hp: 100, at: 70, df: 200, sa: 70, sd: 160, sp: 10 },
+        weightkg: 128.6,
+        baseSpecies: 'Tangrowth',
+        abilities: { 0: 'Arena Trap' }
+    },
+    'Tangrowth-Pulse-C': {
+        types: ['Grass', 'Poison'],
+        bs: { hp: 100, at: 70, df: 200, sa: 70, sd: 160, sp: 10 },
+        weightkg: 128.6,
+        baseSpecies: 'Tangrowth',
+        abilities: { 0: 'Filter' }
+    },
     Araquanid: {
         types: ['Water', 'Bug'],
         bs: { hp: 68, at: 70, df: 92, sa: 50, sd: 132, sp: 42 },
