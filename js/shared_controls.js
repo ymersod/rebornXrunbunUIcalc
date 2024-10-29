@@ -56,7 +56,7 @@ function startsWith(string, target) {
 
 var LEGACY_STATS_RBY = ["hp", "at", "df", "sl", "sp"];
 var LEGACY_STATS_GSC = ["hp", "at", "df", "sa", "sd", "sp"];
-var LEGACY_STATS = [[], LEGACY_STATS_RBY, LEGACY_STATS_GSC, LEGACY_STATS_GSC, LEGACY_STATS_GSC, LEGACY_STATS_GSC, LEGACY_STATS_GSC, LEGACY_STATS_GSC, LEGACY_STATS_GSC, LEGACY_STATS_GSC];
+var LEGACY_STATS = [[], LEGACY_STATS_RBY, LEGACY_STATS_GSC, LEGACY_STATS_GSC, LEGACY_STATS_GSC, LEGACY_STATS_GSC, LEGACY_STATS_GSC, LEGACY_STATS_GSC, LEGACY_STATS_GSC, LEGACY_STATS_GSC, LEGACY_STATS_GSC, LEGACY_STATS_GSC, LEGACY_STATS_GSC, LEGACY_STATS_GSC, LEGACY_STATS_GSC];
 var HIDDEN_POWER_REGEX = /Hidden Power (\w*)/;
 
 var CALC_STATUS = {
@@ -393,7 +393,7 @@ $(".move-selector").change(function () {
 	moveGroupObj.children(".move-bp").val(moveName === 'Present' ? 40 : move.bp);
 	var m = moveName.match(HIDDEN_POWER_REGEX);
 	if (m) {
-		var pokeObj = $(this).closest(".poke-info");
+		var pokeObj = $(this).closest(".poke-info")
 		var pokemon = createPokemon(pokeObj);
 		var actual = calc.Stats.getHiddenPower(GENERATION, pokemon.ivs);
 		if (actual.type !== m[1]) {
@@ -1501,7 +1501,6 @@ function addBoxed(poke, box) {
 
 function getSrcImgPokemon(poke) {
 	// edge case
-	console.log(poke.name)
     if (!poke) {
         return
     }

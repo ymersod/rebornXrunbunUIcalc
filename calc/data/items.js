@@ -79,6 +79,7 @@ var GSC = [
     'Charcoal',
     'Dragon Fang',
     'Dragon Scale',
+    'Energy Powder',
     'Fast Ball',
     'Fire Stone',
     'Focus Band',
@@ -330,6 +331,7 @@ var BW = DPP.concat([
     'Dream Ball',
     'Eject Button',
     'Electric Gem',
+    'Everstone',
     'Eviolite',
     'Fighting Gem',
     'Fire Gem',
@@ -421,6 +423,12 @@ var XY = BW.concat(__spreadArray(__spreadArray([], __read(Object.keys(exports.ME
     'Whipped Dream',
 ], false).sort());
 var SM = XY.filter(function (i) { return i !== 'Old Amber'; }).concat([
+    'PULSE',
+    'Telluric Seed',
+    'Synthetic Seed',
+    'Elemental Seed',
+    'Magical Seed',
+    'Amplifield Rock',
     'Adrenaline Orb',
     'Aloraichium Z',
     'Beast Ball',
