@@ -64,6 +64,7 @@ export function calculate(
   move: A.Move,
   field?: A.Field
 ): A.Result {
+  console.log(typeof gen === 'number' ? Generations.get(gen) : gen);
   return (Acalculate || A.calculate)(
     typeof gen === 'number' ? Generations.get(gen) : gen,
     attacker,

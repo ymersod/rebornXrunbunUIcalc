@@ -90,7 +90,7 @@ export function calculateADV(
 
   desc.HPEVs = `${defender.evs.hp} HP`;
 
-  const fixedDamage = handleFixedDamageMoves(attacker, move, defender);
+  const fixedDamage = handleFixedDamageMoves(attacker, move);
   if (fixedDamage) {
     result.damage = fixedDamage;
     return result;

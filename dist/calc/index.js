@@ -43,6 +43,7 @@ var data_1 = require("./data");
 var A = __importStar(require("./adaptable"));
 var Acalculate = exports.calculate;
 function calculate(gen, attacker, defender, move, field) {
+    console.log(typeof gen === 'number' ? data_1.Generations.get(gen) : gen);
     return (Acalculate || A.calculate)(typeof gen === 'number' ? data_1.Generations.get(gen) : gen, attacker, defender, move, field);
 }
 exports.calculate = calculate;

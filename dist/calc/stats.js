@@ -96,7 +96,7 @@ exports.Stats = new ((function () {
         return ivs;
     };
     class_1.prototype.calcStat = function (gen, stat, base, iv, ev, level, nature) {
-        if (gen.num < 1 || gen.num > 9)
+        if (gen.num < 1 || gen.num > 12)
             throw new Error("Invalid generation ".concat(gen.num));
         if (gen.num < 3)
             return this.calcStatRBY(stat, base, iv, level);

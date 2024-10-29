@@ -8,7 +8,8 @@ import {calculateRBYGSC} from './mechanics/gen12';
 import {calculateADV} from './mechanics/gen3';
 import {calculateDPP} from './mechanics/gen4';
 import {calculateBWXY} from './mechanics/gen56';
-import {calculateSMSSSV} from './mechanics/gen789';
+import { calculateSMSSSV } from './mechanics/gen78';
+import { calculateSMSS } from './mechanics/gen789';
 
 const MECHANICS = [
   () => {},
@@ -21,6 +22,9 @@ const MECHANICS = [
   calculateSMSSSV,
   calculateSMSSSV,
   calculateSMSSSV,
+  calculateSMSS,
+  calculateSMSS,
+  calculateSMSS,
 ];
 
 export function calculate(
@@ -30,7 +34,13 @@ export function calculate(
   move: Move,
   field?: Field,
 ) {
-  return MECHANICS[gen.num](
+  console.log(gen.num);
+  console.log(attacker);
+  console.log(defender);
+  console.log(move);
+  console.log(field);
+  
+  return calculateSMSSSV(
     gen,
     attacker.clone(),
     defender.clone(),

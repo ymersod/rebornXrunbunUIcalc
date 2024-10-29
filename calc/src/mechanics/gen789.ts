@@ -43,7 +43,7 @@ import {
   pokeRound,
 } from './util';
 
-export function calculateSMSSSV(
+export function calculateSMSS(
   gen: Generation,
   attacker: Pokemon,
   defender: Pokemon,
@@ -357,7 +357,7 @@ export function calculateSMSSSV(
 
   desc.HPEVs = `${defender.ivs.hp} HP`;
 
-  const fixedDamage = handleFixedDamageMoves(attacker, move, defender);
+  const fixedDamage = handleFixedDamageMoves(attacker, move);
   if (fixedDamage) {
     if (attacker.hasAbility('Parental Bond')) {
       result.damage = [fixedDamage, fixedDamage];
@@ -541,7 +541,7 @@ export function calculateSMSSSV(
     const child = attacker.clone();
     child.ability = 'Parental Bond (Child)' as AbilityName;
     checkMultihitBoost(gen, child, defender, move, field, desc);
-    childDamage = calculateSMSSSV(gen, child, defender, move, field).damage as number[];
+    childDamage = calculateSMSS(gen, child, defender, move, field).damage as number[];
     desc.attackerAbility = attacker.ability;
   }
 

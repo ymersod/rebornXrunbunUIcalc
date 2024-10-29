@@ -5,7 +5,7 @@ var util_1 = require("../util");
 var items_1 = require("../items");
 var result_1 = require("../result");
 var util_2 = require("./util");
-function calculateSMSSSV(gen, attacker, defender, move, field) {
+function calculateSMSS(gen, attacker, defender, move, field) {
     (0, util_2.checkAirLock)(attacker, field);
     (0, util_2.checkAirLock)(defender, field);
     (0, util_2.checkForecast)(attacker, field.weather);
@@ -240,7 +240,7 @@ function calculateSMSSSV(gen, attacker, defender, move, field) {
         return result;
     }
     desc.HPEVs = "".concat(defender.ivs.hp, " HP");
-    var fixedDamage = (0, util_2.handleFixedDamageMoves)(attacker, move, defender);
+    var fixedDamage = (0, util_2.handleFixedDamageMoves)(attacker, move);
     if (fixedDamage) {
         if (attacker.hasAbility('Parental Bond')) {
             result.damage = [fixedDamage, fixedDamage];
@@ -374,7 +374,7 @@ function calculateSMSSSV(gen, attacker, defender, move, field) {
         var child = attacker.clone();
         child.ability = 'Parental Bond (Child)';
         (0, util_2.checkMultihitBoost)(gen, child, defender, move, field, desc);
-        childDamage = calculateSMSSSV(gen, child, defender, move, field).damage;
+        childDamage = calculateSMSS(gen, child, defender, move, field).damage;
         desc.attackerAbility = attacker.ability;
     }
     var damage = [];
@@ -425,7 +425,7 @@ function calculateSMSSSV(gen, attacker, defender, move, field) {
     result.damage = childDamage ? [damage, childDamage] : damage;
     return result;
 }
-exports.calculateSMSSSV = calculateSMSSSV;
+exports.calculateSMSS = calculateSMSS;
 function calculateBasePowerSMSSSV(gen, attacker, defender, move, field, hasAteAbilityTypeChange, desc) {
     var _a;
     var turnOrder = attacker.stats.spe > defender.stats.spe ? 'first' : 'last';

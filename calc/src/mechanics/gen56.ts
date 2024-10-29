@@ -248,7 +248,7 @@ export function calculateBWXY(
 
   desc.HPEVs = `${defender.evs.hp} HP`;
 
-  const fixedDamage = handleFixedDamageMoves(attacker, move, defender);
+  const fixedDamage = handleFixedDamageMoves(attacker, move);
   if (fixedDamage) {
     if (attacker.hasAbility('Parental Bond')) {
       result.damage = [fixedDamage, fixedDamage];

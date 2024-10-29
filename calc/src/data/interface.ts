@@ -14,7 +14,7 @@ export type SpeciesName = string & As<'SpeciesName'>;
 export type StatusName = 'slp' | 'psn' | 'brn' | 'frz' | 'par' | 'tox';
 
 export type GameType = 'Singles' | 'Doubles';
-export type Terrain = 'Electric' | 'Grassy' | 'Psychic' | 'Misty';
+export type Terrain = 'Flower Garden 1' | 'Flower Garden 2' | 'Flower Garden 3' | 'Flower Garden 4' | 'Flower Garden 5' | 'Crystal Fire' | 'Crystal Water' | 'Crystal Grass' | 'Crystal Psychic' | 'Short-Circuit 0.8' | 'Short-Circuit 1.5' | 'Short-Circuit 0.5' | 'Short-Circuit 1.2' | 'Short-Circuit 2' | 'Ashen Beach' | 'Big Top' | 'Burning' | 'Cave' | 'Chess Board' | 'Corrosive' | 'Corrosive Mist' | 'Dark Crystal' | 'Desert' | 'Dragon\'s Den' | 'Electric' | 'Factory' | 'Fairy Tale' | 'Forest' | 'Glitch' | 'Grassy' | 'Holy' | 'Icy' | 'Inverse' | 'Mirror' | 'Misty' | 'Mountain' | 'Murkwater' | 'New World' | 'Psychic' | 'Rainbow' | 'Rocky' | 'Snowy Mt' | 'Starlight' | 'Superheated' | 'Swamp' | 'Underwater' | 'Wasteland' | 'Water';
 export type Weather =
   | 'Sand' | 'Sun' | 'Rain' | 'Hail' | 'Snow' | 'Harsh Sunshine' | 'Heavy Rain' | 'Strong Winds';
 
