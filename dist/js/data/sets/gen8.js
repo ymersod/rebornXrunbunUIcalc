@@ -4185,19 +4185,19 @@ var SETDEX_SS = {
 			"moves": ["Drain Punch", "Bulk Up", "Payback", "Ice Punch"],
 			"nature": "Careful", "item": "Leftovers"}},
 	"Scraggy": {
-		"Pokemon Gang Doubles (lvl15)": {
+		"Pokemon Gang Doubles": {
 			 "index": 20, "level": 15,
 			"ability": "Intimidate",
 			"evs": {"hp": 22, "at": 22, "df": 22, "sa": 22, "sd": 22, "sp": 22},
 			"ivs": {"hp": 15, "at": 15, "df": 15, "sa": 15, "sd": 15, "sp": 15},
 			"moves": ["Headbutt", "Sand Attack", "Feint Attack", "Swagger"]},
-		"Pokemon Gang Doubles (lvl16)": {
+		"Pokemon Gang Doubles": {
 			 "index": 20, "level": 16,
 			"ability": "Moxie",
 			"evs": {"hp": 24, "at": 24, "df": 24, "sa": 24, "sd": 24, "sp": 24},
 			"ivs": {"hp": 10, "at": 10, "df": 10, "sa": 10, "sd": 10, "sp": 10},
 			"moves": ["Low Kick", "Sand Attack", "Feint Attack", "Swagger"]},
-		"Pokemon Gang Doubles (lvl17)": {
+		"Pokemon Gang Doubles": {
 			 "index": 20, "level": 17,
 			"ability": "Shed Skin",
 			"evs": {"hp": 25, "at": 25, "df": 25, "sa": 25, "sd": 25, "sp": 25},
