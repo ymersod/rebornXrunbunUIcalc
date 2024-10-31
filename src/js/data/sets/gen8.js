@@ -682,7 +682,7 @@ var SETDEX_SS = {
 			"evs": {"hp": 45, "at": 45, "df": 45, "sa": 45, "sd": 45, "sp": 45},
 			"ivs": {"hp": 20, "at": 20, "df": 20, "sa": 20, "sd": 20, "sp": 20},
 			"moves": ["Venom Drench", "Venoshock", "Air Cutter", "Roost"]},
-		"Corey (Corrosive Mist)": {
+		"Borealis (Corrosive Mist)": {
 			 "index": 20, "level": 30,
 			"nature": "Timid",
 			"ability": "Infiltrator",
@@ -4345,7 +4345,7 @@ var SETDEX_SS = {
 			"evs": {"hp": 40, "at": 40, "df": 40, "sa": 40, "sd": 40, "sp": 40},
 			"ivs": {"hp": 15, "at": 15, "df": 15, "sa": 15, "sd": 15, "sp": 15},
 			"moves": ["Pursuit", "Incinerate", "Smokescreen", "Acid Spray"]},
-		"Corey (Corrosive Mist)": {
+		"Borealis (Corrosive Mist)": {
 			 "index": 20, "level": 27,
 			"nature": "Careful",
 			"ability": "Aftermath",
