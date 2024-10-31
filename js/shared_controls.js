@@ -1515,6 +1515,9 @@ function getSrcImgPokemon(poke) {
 
 function get_trainer_poks(trainer_name) {
 	var true_name = trainer_name.substring(trainer_name.indexOf('(') + 1).trim();
+	if (true_name.includes('-')) {
+        true_name = true_name.slice(0, -2).trim();
+    }
 	window.CURRENT_TRAINER = true_name.substring(0, true_name.length -1);
 	var matches = []
 	for (i in TR_NAMES) {

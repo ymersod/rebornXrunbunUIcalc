@@ -170,9 +170,9 @@ function getStats(currentPoke, rows, offset) {
 			currentPoke.teraType = currentTeraType[1].trim();
 		}
 
-		currentNature = rows[x] ? rows[x].trim().split(" ") : '';
-		if (currentNature[1] == "Nature") {
-			currentPoke.nature = currentNature[0];
+		currentNature = rows[x] ? rows[x].trim().split(":") : '';
+		if (currentNature[0] == "Nature") {
+			currentPoke.nature = currentNature[1].trim();
 		}
 	}
 	return currentPoke;
