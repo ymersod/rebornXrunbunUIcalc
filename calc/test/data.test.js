@@ -87,17 +87,17 @@ describe('Generations', function () {
             finally { if (e_1) throw e_1.error; }
         }
     });
-    test('items', function () {
+    test('types', function () {
         var e_4, _a, e_5, _b, e_6, _c;
         try {
             for (var gens_2 = __values(gens), gens_2_1 = gens_2.next(); !gens_2_1.done; gens_2_1 = gens_2.next()) {
                 var gen = gens_2_1.value;
-                var p = Array.from(pkmn.Generations.get(gen).items);
+                var p = Array.from(pkmn.Generations.get(gen).types);
                 var c = new Map();
                 try {
-                    for (var _d = (e_5 = void 0, __values(calc.Generations.get(gen).items)), _e = _d.next(); !_e.done; _e = _d.next()) {
-                        var item = _e.value;
-                        c.set(item.id, item);
+                    for (var _d = (e_5 = void 0, __values(calc.Generations.get(gen).types)), _e = _d.next(); !_e.done; _e = _d.next()) {
+                        var type = _e.value;
+                        c.set(type.id, type);
                     }
                 }
                 catch (e_5_1) { e_5 = { error: e_5_1 }; }
@@ -110,9 +110,9 @@ describe('Generations', function () {
                 expect(Array.from(c.values()).map(function (s) { return s.name; }).sort()).toEqual(p.map(function (s) { return s.name; }).sort());
                 try {
                     for (var p_2 = (e_6 = void 0, __values(p)), p_2_1 = p_2.next(); !p_2_1.done; p_2_1 = p_2.next()) {
-                        var item = p_2_1.value;
-                        expect(c.get(item.id)).toEqual(item);
-                        c["delete"](item.id);
+                        var type = p_2_1.value;
+                        expect(c.get(type.id)).toEqual(type);
+                        c["delete"](type.id);
                     }
                 }
                 catch (e_6_1) { e_6 = { error: e_6_1 }; }
@@ -133,17 +133,17 @@ describe('Generations', function () {
             finally { if (e_4) throw e_4.error; }
         }
     });
-    test('types', function () {
+    test('natures', function () {
         var e_7, _a, e_8, _b, e_9, _c;
         try {
             for (var gens_3 = __values(gens), gens_3_1 = gens_3.next(); !gens_3_1.done; gens_3_1 = gens_3.next()) {
                 var gen = gens_3_1.value;
-                var p = Array.from(pkmn.Generations.get(gen).types);
+                var p = Array.from(pkmn.Generations.get(gen).natures);
                 var c = new Map();
                 try {
-                    for (var _d = (e_8 = void 0, __values(calc.Generations.get(gen).types)), _e = _d.next(); !_e.done; _e = _d.next()) {
-                        var type = _e.value;
-                        c.set(type.id, type);
+                    for (var _d = (e_8 = void 0, __values(calc.Generations.get(gen).natures)), _e = _d.next(); !_e.done; _e = _d.next()) {
+                        var nature = _e.value;
+                        c.set(nature.id, nature);
                     }
                 }
                 catch (e_8_1) { e_8 = { error: e_8_1 }; }
@@ -156,9 +156,9 @@ describe('Generations', function () {
                 expect(Array.from(c.values()).map(function (s) { return s.name; }).sort()).toEqual(p.map(function (s) { return s.name; }).sort());
                 try {
                     for (var p_3 = (e_9 = void 0, __values(p)), p_3_1 = p_3.next(); !p_3_1.done; p_3_1 = p_3.next()) {
-                        var type = p_3_1.value;
-                        expect(c.get(type.id)).toEqual(type);
-                        c["delete"](type.id);
+                        var nature = p_3_1.value;
+                        expect(c.get(nature.id)).toEqual(nature);
+                        c["delete"](nature.id);
                     }
                 }
                 catch (e_9_1) { e_9 = { error: e_9_1 }; }
@@ -177,52 +177,6 @@ describe('Generations', function () {
                 if (gens_3_1 && !gens_3_1.done && (_a = gens_3["return"])) _a.call(gens_3);
             }
             finally { if (e_7) throw e_7.error; }
-        }
-    });
-    test('natures', function () {
-        var e_10, _a, e_11, _b, e_12, _c;
-        try {
-            for (var gens_4 = __values(gens), gens_4_1 = gens_4.next(); !gens_4_1.done; gens_4_1 = gens_4.next()) {
-                var gen = gens_4_1.value;
-                var p = Array.from(pkmn.Generations.get(gen).natures);
-                var c = new Map();
-                try {
-                    for (var _d = (e_11 = void 0, __values(calc.Generations.get(gen).natures)), _e = _d.next(); !_e.done; _e = _d.next()) {
-                        var nature = _e.value;
-                        c.set(nature.id, nature);
-                    }
-                }
-                catch (e_11_1) { e_11 = { error: e_11_1 }; }
-                finally {
-                    try {
-                        if (_e && !_e.done && (_b = _d["return"])) _b.call(_d);
-                    }
-                    finally { if (e_11) throw e_11.error; }
-                }
-                expect(Array.from(c.values()).map(function (s) { return s.name; }).sort()).toEqual(p.map(function (s) { return s.name; }).sort());
-                try {
-                    for (var p_4 = (e_12 = void 0, __values(p)), p_4_1 = p_4.next(); !p_4_1.done; p_4_1 = p_4.next()) {
-                        var nature = p_4_1.value;
-                        expect(c.get(nature.id)).toEqual(nature);
-                        c["delete"](nature.id);
-                    }
-                }
-                catch (e_12_1) { e_12 = { error: e_12_1 }; }
-                finally {
-                    try {
-                        if (p_4_1 && !p_4_1.done && (_c = p_4["return"])) _c.call(p_4);
-                    }
-                    finally { if (e_12) throw e_12.error; }
-                }
-                expect(c.size).toBe(0);
-            }
-        }
-        catch (e_10_1) { e_10 = { error: e_10_1 }; }
-        finally {
-            try {
-                if (gens_4_1 && !gens_4_1.done && (_a = gens_4["return"])) _a.call(gens_4);
-            }
-            finally { if (e_10) throw e_10.error; }
         }
     });
 });
