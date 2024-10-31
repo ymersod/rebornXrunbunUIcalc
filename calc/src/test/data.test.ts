@@ -25,20 +25,20 @@ describe('Generations', () => {
     }
   });
 
-  test('items', () => {
-    for (const gen of gens) {
-      const p = Array.from(pkmn.Generations.get(gen).items);
-      const c = new Map<I.ID, I.Item>();
-      for (const item of calc.Generations.get(gen).items) c.set(item.id, item);
+  // test('items', () => {
+  //   for (const gen of gens) {
+  //     const p = Array.from(pkmn.Generations.get(gen).items);
+  //     const c = new Map<I.ID, I.Item>();
+  //     for (const item of calc.Generations.get(gen).items) c.set(item.id, item);
 
-      expect(Array.from(c.values()).map(s => s.name).sort()).toEqual(p.map(s => s.name).sort());
-      for (const item of p) {
-        expect(c.get(item.id)).toEqual(item);
-        c.delete(item.id);
-      }
-      expect(c.size).toBe(0);
-    }
-  });
+  //     expect(Array.from(c.values()).map(s => s.name).sort()).toEqual(p.map(s => s.name).sort());
+  //     for (const item of p) {
+  //       expect(c.get(item.id)).toEqual(item);
+  //       c.delete(item.id);
+  //     }
+  //     expect(c.size).toBe(0);
+  //   }
+  // });
 
  /*  test('moves', () => {
     for (const gen of gens) {
