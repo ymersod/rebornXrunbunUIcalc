@@ -453,7 +453,7 @@ var SETDEX_SS = {
 			"evs": {"hp": 4, "at": 0, "df": 252, "sa": 0, "sd": 252, "sp": 0},
 			"moves": ["Blizzard", "Thunderbolt", "Psychic", "Soft-Boiled"]}},
 	"Charmeleon": {
-		"Volcanic Cal (Rainbow )": {
+		"Volcanic Cal (Rainbow)": {
 			 "index": 20, "level": 33,
 			"nature": "Serious",
 			"ability": "Blaze",
