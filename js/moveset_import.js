@@ -125,7 +125,6 @@ function statToLegacyStat(stat) {
 }
 
 function getStats(currentPoke, rows, offset) {
-	currentPoke.nature = "Serious";
 	var currentEV;
 	var currentIV;
 	var currentAbility;
@@ -207,6 +206,7 @@ function getMoves(currentPoke, rows, offset) {
 	currentPoke.moves = moves;
 	return currentPoke;
 }
+
 
 function addToDex(poke) {
 	var dexObject = {};
